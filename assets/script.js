@@ -66,9 +66,13 @@ function updateSlide(index) {
     tagLine.innerHTML = slides[index].tagLine;
 
     // Update active dot
-    document.querySelector('.dot.dot-selected').classList.remove('dot-selected');
+    const currentDot = dotsContainer.querySelector('.dot-selected');
+    if (currentDot) {
+        currentDot.classList.remove('dot-selected');
+    }
     dotsContainer.children[index].classList.add('dot-selected');
 }
+
 
 // Initialize the first slide
 updateSlide(slidecourant);

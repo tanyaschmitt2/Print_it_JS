@@ -52,7 +52,7 @@ slides.forEach((slide, index) => {
     const dot = document.createElement('span');
     dot.classList.add('dot');
     if (index === 0) {
-        dot.classList.add('dot-selected'); // Mark the first dot as active
+        dot.classList.add('dot_selected'); // Mark the first dot as active
     }
     dot.addEventListener('click', () => {
         updateSlide(index);
@@ -66,11 +66,11 @@ function updateSlide(index) {
     tagLine.innerHTML = slides[index].tagLine;
 
     // Update active dot
-    const currentDot = dotsContainer.querySelector('.dot-selected');
+    const currentDot = dotsContainer.querySelector('.dot_selected');
     if (currentDot) {
-        currentDot.classList.remove('dot-selected');
+        currentDot.classList.remove('dot_selected');
     }
-    dotsContainer.children[index].classList.add('dot-selected');
+    dotsContainer.children[index].classList.add('dot_selected');
 }
 
 
